@@ -1,0 +1,202 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 50%, #00b894 100%);
+    min-height: 100vh;
+    color: #2d3436;
+}
+
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(116, 185, 255, 0.9), rgba(0, 184, 148, 0.9));
+    color: white;
+    animation: waveIn 1.5s ease-out;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: float 3s ease-in-out infinite;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.95);
+    margin: 30px 0;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    animation: slideUp 0.8s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+h2 {
+    color: #0984e3;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #636e72;
+    line-height: 1.8;
+}
+
+.beach-image {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.beach-image:hover {
+    transform: scale(1.05);
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.beach-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #74b9ff, #0984e3);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(116, 185, 255, 0.4);
+}
+
+.beach-link:hover {
+    background: linear-gradient(45deg, #0984e3, #74b9ff);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(116, 185, 255, 0.6);
+}
+
+.paradise-button {
+    display: block;
+    margin: 30px auto;
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00b894, #55efc4);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.paradise-button:hover {
+    background: linear-gradient(45deg, #55efc4, #00b894);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 184, 148, 0.6);
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(45, 52, 54, 0.9);
+    color: white;
+    margin-top: 50px;
+}
+
+/* Animations */
+@keyframes waveIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .container {
+        padding: 20px 15px;
+    }
+    
+    section {
+        padding: 25px;
+        margin: 20px 0;
+    }
+    
+    .links-container {
+        gap: 10px;
+    }
+    
+    .beach-link {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
